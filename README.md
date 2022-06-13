@@ -1,6 +1,6 @@
 # Matrix Logarithm and Frechet derivative
 
-Pytorch version of `scipy.linalg.sqrtm` and `scipy.linalg.logm` and their backward derivative..
+Pytorch version of `scipy.linalg.sqrtm` and `scipy.linalg.logm` and their backward derivative.
 
 1. link
    * computing the Frechet derivative of the matrix logarithm and estimating the condition number [link](https://epubs.siam.org/doi/10.1137/120885991)
@@ -9,7 +9,7 @@ Pytorch version of `scipy.linalg.sqrtm` and `scipy.linalg.logm` and their backwa
    * [github/pytorch/issue/sqrtm](https://github.com/pytorch/pytorch/issues/25481)
    * [github/pytorch/issue/schur-decomposition](https://github.com/pytorch/pytorch/issues/78809)
    * [github/pytorch/issue/logm](https://github.com/pytorch/pytorch/issues/9983)
-2. current limitation
+2. current limitations
    * only CPU, no GPU support: we use `scipy.linalg.sqrtm` in the implementation
    * no batch support: please use for-loop
    * performance issue: we simply implement the most **naive** version (algorithm-2.1) from the paper
