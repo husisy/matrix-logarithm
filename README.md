@@ -9,10 +9,12 @@ Pytorch version of `scipy.linalg.sqrtm` and `scipy.linalg.logm` and their backwa
    * [github/pytorch/issue/sqrtm](https://github.com/pytorch/pytorch/issues/25481)
    * [github/pytorch/issue/schur-decomposition](https://github.com/pytorch/pytorch/issues/78809)
    * [github/pytorch/issue/logm](https://github.com/pytorch/pytorch/issues/9983)
-2. current limitations
-   * only CPU, no GPU support: we use `scipy.linalg.sqrtm` in the implementation
-   * no batch support: please use for-loop
-   * performance issue: we simply implement the most **naive** version (algorithm-2.1) from the paper
+2. feature
+   * support GPU: eigen-decomposition is used, maybe not efficient. It's recommanded to compare which one is faster (CPU/GPU) before choosing
+   * support batch
+   * support complex matrix
+3. for CPU and no batch version, we use `scipy.linalg.sqrtm` in the implementation
+4. performance issue: we simply implement the most **naive** version (algorithm-2.1) from the paper
 
 usage
 
